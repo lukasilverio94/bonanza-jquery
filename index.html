@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootswatch -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <!-- local CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Introduction to jQuery</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-primary py-3" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">jQuery Tutorial</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor01"
+            aria-controls="navbarColor01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About jQuery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <div class="container">
+        <div class="row">
+          <!-- Col 1  -->
+          <div class="col col-md-7">
+            <h1 class="text-center mt-3 display-4 border-bottom border-2 pb-3">
+              Learn about jQuery
+            </h1>
+            <h3 class="fw-bold">What is jQuery?</h3>
+            <p>
+              jQuery is a lightweight, "write less, do more", JavaScript
+              library. The purpose of jQuery is to make it much easier to use
+              JavaScript on your website. jQuery takes a lot of common tasks
+              that require many lines of JavaScript code to accomplish, and
+              wraps them into methods that you can call with a single line of
+              code.
+            </p>
+            <h4 class="fw-bold">Shorter code with jQuery!</h4>
+            <p>
+              For example our Shrek, is really easy to make a function to make
+              it fade in this library:
+            </p>
+            <code>
+              function fadeImg() <br />
+              { <br />$("#shrek-card-img").fadeToggle() <br />
+              }
+            </code>
+          </div>
+          <!-- end col 1 -->
+
+          <!-- col 2 -->
+          <div class="col col-md-5">
+            <h3 class="my-3 text-center">Some nice function with jQuery:</h3>
+            <!-- card -->
+            <div class="card d-flex justify-content-center">
+              <img
+                id="shrek-card-img"
+                src="imgs/shrek.webp"
+                class="card-img-top img-fluid"
+                alt="shrek"
+              />
+              <div class="card-body">
+                <h5 class="card-title fw-semibold">Make Shrek to fade</h5>
+                <p class="card-text">
+                  Click at the button and see the magic of jQuery with few lines
+                  of code. To get Shrek back, just click again!
+                </p>
+                <a
+                  href="#"
+                  id="btn-fade-card"
+                  onclick="fadeImg()"
+                  class="btn btn-primary"
+                  >Fade Shrek</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- End col 2 -->
+        </div>
+
+        <!-- Some more Functions -->
+        <div class="container-fluid mt-4 border-top border-3 border-info py-4">
+          <h1 class="text-center display-5 py-3">
+            Lets make some more functionalities for our jQuery:
+          </h1>
+          <p id="paragraph-change-color">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
+            pariatur voluptatem at repudiandae quas ab quibusdam atque nihil
+            velit numquam tempore architecto delectus praesentium ducimus nam,
+            labore quos accusamus aspernatur rerum beatae. Molestiae laudantium
+            facere numquam odit. Ad amet vero deleniti eum,
+          </p>
+          <button id="change-color" onclick="changeColor()" class="btn btn-info rounded-4">Change color paragraph above</button>
+        </div>
+
+        <!-- End Main container -->
+      </div>
+    </main>
+    <!-- JQuery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- Javascript -->
+    <script src="jq.js" type="text/javascript"></script>
+  </body>
+</html>
