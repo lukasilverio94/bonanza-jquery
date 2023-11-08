@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootswatch -->
     <link rel="stylesheet" href="bootstrap.min.css" />
-    <!-- local CSS -->
-    <link rel="stylesheet" href="style.css" />
+
     <title>Introduction to jQuery</title>
   </head>
   <body>
@@ -32,10 +31,7 @@
                 <a class="nav-link" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About jQuery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#random-quotes">Random Quotes</a>
               </li>
             </ul>
           </div>
@@ -71,6 +67,11 @@
               { <br />$("#shrek-card-img").fadeToggle() <br />
               }
             </code>
+            <p class="text-info fs-5">
+              Here you don't need select with the boring
+              <code>document.getElementById</code>, you just use
+              <code>$('#element-id').applyAnyMethodHere...</code>
+            </p>
           </div>
           <!-- end col 1 -->
 
@@ -86,7 +87,9 @@
                 alt="shrek"
               />
               <div class="card-body">
-                <h5 class="card-title fw-semibold">Make Shrek to fade</h5>
+                <h5 class="card-title fw-semibold text-info">
+                  Make Shrek to fade
+                </h5>
                 <p class="card-text">
                   Click at the button and see the magic of jQuery with few lines
                   of code. To get Shrek back, just click again!
@@ -105,10 +108,8 @@
         </div>
 
         <!-- Some more Functions -->
-        <div class="container-fluid mt-4 border-top border-3 border-info py-4">
-          <h1 class="text-center display-5 py-3">
-            Lets make some more functionalities for our jQuery:
-          </h1>
+        <div class="container-fluid border-top border-3 border-info py-4">
+          <h1 class="text-center display-5 pb-2">Change the color text:</h1>
           <p id="paragraph-change-color">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae
             pariatur voluptatem at repudiandae quas ab quibusdam atque nihil
@@ -116,12 +117,49 @@
             labore quos accusamus aspernatur rerum beatae. Molestiae laudantium
             facere numquam odit. Ad amet vero deleniti eum,
           </p>
-          <button id="change-color" onclick="changeColor()" class="btn btn-info rounded-4">Change color paragraph above</button>
+          <button
+            id="change-color"
+            onclick="changeColor()"
+            class="btn btn-primary rounded-4"
+          >
+            Toggle Color:
+          </button>
+          <h4 class="mt-3">Code used:</h4>
+          <p>
+            <code
+              >function changeColor() {
+              $("#paragraph-change-color").toggleClass("text-danger"); }</code
+            >
+          </p>
+          <p class="text-info fw-semibold">...simple, no?</p>
         </div>
 
+        <!-- Random Quotes Generator -->
+
+        <div
+          class="container border-top border-2 border-info py-3 bg-white w-75 mb-5 rounded-4"
+          id="random-quotes"
+          style="min-height: 200px"
+        >
+          <div class="quote-text">
+            <h4  class="fs-4 text-primary fw-semibold mb-3">
+              before you leave the website, get some inspirational phrase bellow:
+            </h4>
+            <p id="quote" class="text-dark fs-4"></p>
+            <p id="author" class="text-end text-info fw-semibold fst-italic"  ></p>
+            <button id="quote-btn" class="btn btn-dark rounded-4">
+              Click Here
+            </button>
+          </div>
+        </div>
         <!-- End Main container -->
       </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="container text-center">
+      <p class="fs-4">coded by &copy; <span class="text-danger">Lucas Silverio</span></p>
+    </footer>
     <!-- JQuery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
