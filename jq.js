@@ -99,6 +99,8 @@ $("#getValueBtn").click(() => {
   const inputValue = $("#myInput").val();
   $("#result").text("The input value is: " + inputValue);
   $("#result").addClass("text-danger fw-semibold");
+  //clear input
+  $("#myInput").val("");
 });
 
 // Quote Generator (Used html() and text() from jquery)
