@@ -71,13 +71,19 @@ const quotes = [
     author: "Cory House",
   },
 ];
-
+//Select Quote Button 
 const $quoteBtn = $("#quote-btn");
 
-function fadeImg() {
-  $("#shrek-card-img").fadeToggle(2000);
-}
+//Slide toggle div
+$("#slide-btn").click(() => {
+  $("#slide-div").slideToggle();
+})
 
+function fadeImg() {
+  $("#shrek-card-img").fadeToggle(1000, () => {
+
+  });
+}
 function changeColor() {
   $("#paragraph-change-color").toggleClass("text-danger");
 }
