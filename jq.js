@@ -71,32 +71,53 @@ const quotes = [
     author: "Cory House",
   },
 ];
-//Select Quote Button 
-const $quoteBtn = $("#quote-btn");
 
 //Slide toggle div
 $("#slide-btn").click(() => {
   $("#slide-div").slideToggle();
-})
+});
 
+//FadeIn and fadeOut (fadeToggle)
 function fadeImg() {
-  $("#shrek-card-img").fadeToggle(1000, () => {
-
-  });
+  $("#shrek-card-img").fadeToggle(1000, () => {});
 }
 function changeColor() {
   $("#paragraph-change-color").toggleClass("text-danger");
 }
 
-// Quote Generator
+// append elements
+$("#append-btn").click(() => {
+  $("#append-text").append(
+    "<p>Appended element with a class to center it!</p>"
+  );
+  //add class to text-center:
+  $("#append-text").addClass("text-center text-info small");
+});
+
+//Input, use val() to get value:
+$("#getValueBtn").click(() => {
+  const inputValue = $("#myInput").val();
+  $("#result").text("The input value is: " + inputValue);
+  $("#result").addClass("text-danger fw-semibold");
+});
+
+// Quote Generator (Used html() and text() from jquery)
+const $quoteBtn = $("#quote-btn");
+
 function displayRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
-  $("#quote").text(quotes[randomIndex].quote);
+  $("#quote").html(quotes[randomIndex].quote);
   $("#author").text("by - " + quotes[randomIndex].author);
 }
 
-// Click event for the "quote-btn" button
-$("#quote-btn").click(displayRandomQuote);
-
-// Initial quote display
+$quoteBtn.click(displayRandomQuote);
 displayRandomQuote();
+
+// Show or Hide Quote Container
+$("#show-quote").click(() => {
+  $("#random-quotes").show();
+});
+
+$("#hide-quote").click(() => {
+  $("#random-quotes").hide();
+});
